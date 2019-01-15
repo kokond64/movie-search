@@ -1,0 +1,29 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://github.com/kokond64/movie-search/webapp/format.css">
+
+<div class="search">
+  <h1>Search The Movie Database</h1>
+  <p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
+  <p>Enter Movie Title:
+    <input type="text" id="search" name="search" required>
+    <button v-on:click="searchMovie">Search</button>
+  </p>
+</div>
+
+<div id="app">
+  
+  <div class="product">
+        
+      <div class="product-image">
+        <img :src="image" />
+      </div>
+
+      <div class="product-info">
+        <h2>{{ title }}</h2>
+        <p>{{ popularity_summary }}</p>
+
+       </div>  
+    
+    </div>
+  </div> 
